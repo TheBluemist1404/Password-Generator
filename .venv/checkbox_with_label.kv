@@ -1,0 +1,13 @@
+<CheckBoxwithLabel@BoxLayout>:
+    pos_hint: {'center_x': 0.5}
+    size_hint: .5, None
+    height: 50
+    label_text: ""       #Initialize
+    check: _check
+    CheckBox:
+        id: _check
+        pos_hint: {'center_y':0.5}
+        size_hint: None, None
+        size: 20,20
+    Label:
+        text: root.label_text

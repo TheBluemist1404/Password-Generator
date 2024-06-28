@@ -1,0 +1,44 @@
+<PassGenerator@BoxLayout>:
+    orientation: 'vertical'
+    spacing: 20
+    upper: _upper
+    number: _number
+    special: _special
+    text_input: _text_input
+    output: _output
+    Label:
+        size_hint: 0.5, None
+        height: 50
+        font_size: 50
+        text: "Password Generator"
+        pos_hint: {'center_x': 0.5}
+    BoxLayout:
+        orientation: 'vertical'
+        CheckBoxwithLabel:
+            id: _upper
+            label_text: "Include captital letters"
+        CheckBoxwithLabel:
+            id: _number
+            label_text: "Include numbers"
+        CheckBoxwithLabel:
+            id: _special
+            label_text: "Include special characters"
+
+        TextInputwithLabel:
+            id: _text_input
+            label_text: "Password length"
+
+        Label:  #adding space
+            size_hint: 1, None
+            height: 10
+
+        Button:
+            pos_hint: {'center_x':0.5}
+            size_hint: 0.3, None
+            height: 50
+            text: "Generate Password"
+            on_press: root.generate()
+        TextInput:
+            id: _output
+            readonly: True
+            text: ""

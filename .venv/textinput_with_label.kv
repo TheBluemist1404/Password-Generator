@@ -1,0 +1,16 @@
+<TextInputwithLabel@BoxLayout>:
+    pos_hint: {'center_x': 0.5}
+    size_hint: .5, None
+    height: 50
+    label_text: ""
+    input: _input
+    Label:
+        pos_hint: {'center_y':0.5}
+        size_hint: None, None
+        size: 150,20
+        text: root.label_text
+    TextInput:
+        id: _input
+        hint_text: "Enter length"
+        multiline: False
+
